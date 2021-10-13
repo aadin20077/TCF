@@ -21,8 +21,7 @@ class Resources extends React.Component {
     e('p', null, `Our services only provide the best 
     tutors that will guide you to fulfill all your programming 
     inquires. Get started with coding, the right way with our mentors.`), e('button', null, 'Read More')])], 
-    e('footer', null, 'Trusted By Students, Verified By Mentors'),
-    e('hr', null, null));
+    e(Footer, null));
   }
 }
 
@@ -38,7 +37,8 @@ class Testimonials extends React.Component {
     e('div', {id: 'reviews-container'}, [
       e(Review, {name: 'Peter Schon', role: 'TCF Student'}), 
       e(Review, {name: 'Jane Austin', role: 'TCF Student'}), 
-      e(Review, {name: 'Justin Bob', role: 'TCF Student'})])])
+      e(Review, {name: 'Justin Bob', role: 'TCF Student'})])], 
+      e(Footer, null))
   }
 }
 
@@ -49,11 +49,25 @@ class Review extends React.Component {
       e('div', {id: 'review-info'}, [
         e('img', {src: 'images/testimonials-img.png', alt: `A picture of ${this.props.name}`, class: 'review-pic'}, null), 
         e('div', {class: 'reviews'}, [
-          e('p', null, [this.props.name, e('br', null), this.props.role]),  
-          e('img', {src: 'images/testimonials-star.png', alt: `Rating for The Coding Foundation given by ${this.props.name}`}, null), 
-          e('p', null, `The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours 
-        of class daily for 3 weeks for free!`)])])
+          e('p', {class: 'review-person'}, [this.props.name, e('br', null), this.props.role]),  
+          e('span', null, [
+            e('img', {src: 'images/testimonials-star.png', alt: ''}, null), 
+            e('img', {src: 'images/testimonials-star.png', alt: ''}, null), 
+            e('img', {src: 'images/testimonials-star.png', alt: ''}, null), 
+            e('img', {src: 'images/testimonials-star.png', alt: ''}, null), 
+            e('img', {src: 'images/testimonials-star.png', alt: ''}, null)]), 
+          e('p', null, `"The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours 
+        of class daily for 3 weeks for free!"`)])])
     );
+  }
+}
+
+class Footer extends React.Component {
+
+  render() {
+    return (e(React.Fragment, null, 
+      e('footer', null, 'Trusted By Students, Verified By Mentors', e('hr', null, null)))
+    )
   }
 }
 
