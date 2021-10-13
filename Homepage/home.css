@@ -8,11 +8,12 @@
 
 section {
     height: 100vh;
-    width: 100vw;
+    width: auto;
 }
 
 :root {
     --foot-width: 90%;
+    --font-style: 'Roboto', sans-serif;
 }
 
 
@@ -24,29 +25,20 @@ section {
     grid-column-gap: 10px;
 }
 
-#resources-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #resources img {
     width: 100%;
     height: 80%;
     z-index: -1;
     position: relative;
-    top: 10px;
+    top: 90px;
 }
 
 #resources-info {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-style);
     margin: 25px auto;
-    width: 45%;
+    width: 48%;
     text-align: right;
-}
-
-#resources span {
-    text-align: right;
+    color: #444343;
 }
 
 #resources h2 {
@@ -57,7 +49,7 @@ section {
 
 #resources p {
     font-size: 43px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 #resources button {
@@ -80,7 +72,7 @@ section {
     width: var(--foot-width);
     grid-column: 1 / 3;
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-style);
     color: #6F6F6F;
 }
 
@@ -92,4 +84,64 @@ section {
     border-radius: 50px;
     border: 0;
     height: 4px;
+}
+
+
+/* <------------ Testimonials ------------> */
+
+#testimonial-info {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-family: var(--font-style);
+    font-size: 40px;
+}
+
+#testimonials h2 {
+    text-align: center;
+    padding-top: 25px;
+    color: #585858;
+    font-family: var(--font-style);
+    font-size: 70px;
+}
+
+#reviews-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-pic {
+    width: 50%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    bottom: 20px;
+}
+
+#review-info {
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 40%;
+    padding: 60px 20px 20px;
+    position: relative;
+    bottom: 100px;
+}
+
+.reviews p {
+    font-size: 25px;
+    font-family: var(--font-style)
+}
+
+.reviews img {
+    width: 10%;
+    margin: 20px auto;
+    height: auto;
 }
