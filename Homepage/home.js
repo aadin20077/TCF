@@ -8,7 +8,8 @@ class App extends React.Component {
     return (e(React.Fragment, null,
       e(Resources, null),
       e(Testimonials, null), 
-      e(Internship, null)));
+      e(Internship, null), 
+      e(Discord, null)));
   }
 }
 
@@ -86,6 +87,26 @@ class Internship extends React.Component {
           you want to learn more, click the button below!`), 
           e('button', null, 'Join Now!')]), 
           e('img', {src: 'images/internship-img2.png', alt: ''}, null)]),
+        e(Footer, null)])
+    )
+  }
+}
+
+class Discord extends React.Component {
+
+  render() {
+    return (
+      e('section', {id: 'discord'}, [
+        e('h2', null, 'Join Our Discord Server to Explore your passion for Coding!'),
+        e('div', {id: 'discord-content'}, [ 
+          e('span', null, [
+            e('p', null, 'Discord'), 
+            e('img', {src: 'images/discord-phone.png', alt: ''}, null)]), 
+          e('div', {id: 'discord-info'}, [
+            e('img', {src: 'images/discord-icon.png', alt: ''}, null), 
+            e('p', null, `Join to get in touch with students across the world. 
+            Develop your network to develop your passion. Anyone Could join Discord!`), 
+            e('button', null, 'Join Now')])]), 
         e(Footer, null)])
     )
   }
