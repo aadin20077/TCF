@@ -4,6 +4,7 @@
 
 * {
     margin: 0;
+    font-family: var(--font-style);
 }
 
 section {
@@ -16,6 +17,20 @@ section {
     --font-style: 'Roboto', sans-serif;
 }
 
+footer {
+    margin: 0 auto;
+    width: var(--foot-width);
+    font-size: 18px;
+    font-family: var(--font-style);
+    color: #6F6F6F;
+}
+
+hr {
+    background-color: #C4C4C4;
+    border-radius: 50px;
+    border: 0;
+    height: 4px;
+}
 
 /* <------------ Resources ------------> */
 
@@ -68,22 +83,11 @@ section {
 }
 
 #resources footer {
-    margin: auto auto 0;
-    width: var(--foot-width);
     grid-column: 1 / 3;
-    font-size: 18px;
-    font-family: var(--font-style);
-    color: #6F6F6F;
 }
 
 #resources hr {
-    width: var(--foot-width);
     grid-column: 1 / 3;
-    margin: auto;
-    background-color: #C4C4C4;
-    border-radius: 50px;
-    border: 0;
-    height: 4px;
 }
 
 
@@ -92,14 +96,13 @@ section {
 #testimonial-info {
     width: 50%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 30px;
     font-family: var(--font-style);
     font-size: 40px;
 }
 
 #testimonials h2 {
     text-align: center;
-    padding-top: 25px;
     color: #585858;
     font-family: var(--font-style);
     font-size: 70px;
@@ -111,28 +114,31 @@ section {
 }
 
 .review-pic {
-    width: 50%;
+    width: 30%;
     height: auto;
     position: relative;
     z-index: 1;
     bottom: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
-#review-info {
-    text-align: center;
+.review-person {
+    font-weight: bold;
 }
 
 .reviews {
+    text-align: center;
     display: flex;
     flex-direction: column;
     background: #F7F7F7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     margin: 0 auto;
-    width: 40%;
-    padding: 60px 20px 20px;
+    width: 35%;
+    padding: 30px;
     position: relative;
-    bottom: 100px;
+    bottom: 60px;
 }
 
 .reviews p {
@@ -141,7 +147,62 @@ section {
 }
 
 .reviews img {
-    width: 10%;
+    width: 20%;
     margin: 20px auto;
     height: auto;
+}
+
+/* <------------ Internship ------------> */
+
+#internship-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#internship-content img {
+    width: 22%;
+    height: 30%;
+}
+
+#internship-content img:nth-of-type(2) {
+    position: relative;
+    top: 280px;
+}
+
+#internship-content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 90vh;
+    width: 40%;
+}
+
+#internship-content h2 {
+    color: #585858;
+    font-size: 70px;
+    font-family: var(--font-style);
+}
+
+#internship-content p {
+    font-size: 40px;
+    color: #444343;
+    font-family: var(--font-style);
+}
+
+#internship-content button {
+    width: 287px;
+    height: 77px;
+    background: #4198B4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin: 0 auto;
+    font-family: var(--font-style);
+    font-size: 30px;
+    color: white;
+    border: 0;
+}
+
+#internship-content button:hover {
+    cursor: pointer;
 }
