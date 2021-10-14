@@ -15,14 +15,15 @@ class App extends React.Component {
 class Resources extends React.Component {
   
   render() {
-    return e('section', {id: "resources"}, 
-    [e('div', {id: "resources-img"}, e('img', {src: 'images/resources-img.png', alt: ''}, null)),
-    e('div', {id: "resources-info"}, 
-    [e('h2', null, 'Resources'), 
-    e('p', null, `Our services only provide the best 
-    tutors that will guide you to fulfill all your programming 
-    inquires. Get started with coding, the right way with our mentors.`), e('button', null, 'Read More')])], 
-    e(Footer, null));
+    return e('section', {id: "resources"}, [
+      e('div', {id: 'resources-content'}, [
+        e('div', {id: "resources-img"}, e('img', {src: 'images/resources-img.png', alt: ''}, null)),
+        e('div', {id: "resources-info"}, [
+          e('h2', null, 'Resources'), 
+        e('p', null, `Our services only provide the best 
+        tutors that will guide you to fulfill all your programming 
+        inquires. Get started with coding, the right way with our mentors.`), e('button', null, 'Read More')])
+      ]), e(Footer, null)]);    
   }
 }
 
@@ -30,7 +31,7 @@ class Testimonials extends React.Component {
 
   render() {
     return e('section', {id: "testimonials"},
-    [e('h2', null, 'Testimonials'), 
+    [e('div', {id: "testimonials-content"}, [e('h2', null, 'Testimonials'), 
     e('p', {id: "testimonial-info"}, `Our services only provide the 
     best tutors that will guide you to fulfill 
     all your programming inquires. Get started 
@@ -38,8 +39,8 @@ class Testimonials extends React.Component {
     e('div', {id: 'reviews-container'}, [
       e(Review, {name: 'Peter Schon', role: 'TCF Student'}), 
       e(Review, {name: 'Jane Austin', role: 'TCF Student'}), 
-      e(Review, {name: 'Justin Bob', role: 'TCF Student'})])], 
-      e(Footer, null))
+      e(Review, {name: 'Justin Bob', role: 'TCF Student'})])]), 
+      e(Footer, null)])
   }
 }
 
