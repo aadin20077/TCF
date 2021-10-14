@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
 /* <------------ Global styles ------------> */
 
 * {
@@ -34,6 +35,11 @@ hr {
     border: 0;
     height: 4px;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
 
 /* <------------ Resources ------------> */
 
@@ -77,10 +83,6 @@ hr {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     border: 0;
-}
-
-#resources-content button:hover {
-    cursor: pointer;
 }
 
 #resources-content footer {
@@ -148,6 +150,7 @@ hr {
     height: auto;
 }
 
+
 /* <------------ Internship ------------> */
 
 #internship-content {
@@ -195,9 +198,6 @@ hr {
     border: 0;
 }
 
-#internship-content button:hover {
-    cursor: pointer;
-}
 
 /* <------------ Discord ------------> */
 
@@ -254,5 +254,71 @@ hr {
     border: 0;
     background: #5B6FB4;
     border-radius: 20px;
+    margin: 0 auto;
+}
+
+
+/* <------------ Contact ------------> */
+
+#contact h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px;
+    width: 45%;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+#contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact-content img {
+    width: 100%;
+    height: auto;
+}
+
+#contact-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 70%;
+}
+
+#contact-content input {
+    width: 100%;
+    height: 64px;
+    background: #F3F3F3;
+    border-radius: 50px;
+    border: 0;
+    font-size: 20px;
+    color: #6F6F6F;
+    padding-left: 50px;
+}
+
+#message {
+    width: 100%;
+    height: 181px;
+    resize: none;
+    color: #6F6F6F;
+    font-size: 20px;
+    background: #F3F3F3;
+    border: 0;
+    padding-top: 30px;
+    border-radius: 20px;
+    padding-left: 50px;
+}
+
+#contact-content button {
+    width: 287px;
+    height: 66px;
+    background: #4198B4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: 0;
+    font-size: 30px;
     margin: 0 auto;
 }
