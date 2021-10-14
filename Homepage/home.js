@@ -7,7 +7,8 @@ class App extends React.Component {
   render() {
     return (e(React.Fragment, null,
       e(Resources, null),
-      e(Testimonials, null)));
+      e(Testimonials, null), 
+      e(Internship, null)));
   }
 }
 
@@ -67,6 +68,24 @@ class Footer extends React.Component {
   render() {
     return (e(React.Fragment, null, 
       e('footer', null, 'Trusted By Students, Verified By Mentors', e('hr', null, null)))
+    )
+  }
+}
+
+class Internship extends React.Component {
+
+  render() {
+    return (
+      e('section', {id: 'internship'}, [
+        e('div', {id: 'internship-content'}, [
+          e('img', {src: 'images/internship-img1.png', alt: ''}, null),
+          e('div', null, [e('h2', null, 'Join Us'), 
+          e('p', null, `The Coding Foundation offers 
+          internship positions for any department. If 
+          you want to learn more, click the button below!`), 
+          e('button', null, 'Join Now!')]), 
+          e('img', {src: 'images/internship-img2.png', alt: ''}, null)]),
+        e(Footer, null)])
     )
   }
 }
