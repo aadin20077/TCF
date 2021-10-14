@@ -9,14 +9,16 @@ class App extends React.Component {
       e(Resources, null),
       e(Testimonials, null), 
       e(Internship, null), 
-      e(Discord, null)));
+      e(Discord, null), 
+      e(Contact, null)));
   }
 }
 
 class Resources extends React.Component {
   
   render() {
-    return e('section', {id: "resources"}, [
+    return (
+      e('section', {id: "resources"}, [
       e('div', {id: 'resources-content'}, [
         e('div', {id: "resources-img"}, e('img', {src: 'images/resources-img.png', alt: ''}, null)),
         e('div', {id: "resources-info"}, [
@@ -24,14 +26,16 @@ class Resources extends React.Component {
         e('p', null, `Our services only provide the best 
         tutors that will guide you to fulfill all your programming 
         inquires. Get started with coding, the right way with our mentors.`), e('button', null, 'Read More')])
-      ]), e(Footer, null)]);    
+      ]), e(Footer, null)])
+    );    
   }
 }
 
 class Testimonials extends React.Component {
 
   render() {
-    return e('section', {id: "testimonials"},
+    return (
+      e('section', {id: "testimonials"},
     [e('div', {id: "testimonials-content"}, [e('h2', null, 'Testimonials'), 
     e('p', {id: "testimonial-info"}, `Our services only provide the 
     best tutors that will guide you to fulfill 
@@ -42,6 +46,7 @@ class Testimonials extends React.Component {
       e(Review, {name: 'Jane Austin', role: 'TCF Student'}), 
       e(Review, {name: 'Justin Bob', role: 'TCF Student'})])]), 
       e(Footer, null)])
+    );
   }
 }
 
@@ -70,7 +75,7 @@ class Footer extends React.Component {
   render() {
     return (e(React.Fragment, null, 
       e('footer', null, 'Trusted By Students, Verified By Mentors', e('hr', null, null)))
-    )
+    );
   }
 }
 
@@ -88,7 +93,7 @@ class Internship extends React.Component {
           e('button', null, 'Join Now!')]), 
           e('img', {src: 'images/internship-img2.png', alt: ''}, null)]),
         e(Footer, null)])
-    )
+    );
   }
 }
 
@@ -108,7 +113,25 @@ class Discord extends React.Component {
             Develop your network to develop your passion. Anyone Could join Discord!`), 
             e('button', null, 'Join Now')])]), 
         e(Footer, null)])
-    )
+    );
+  }
+}
+
+class Contact extends React.Component {
+
+  render() {
+    return (
+      e('section', {id: 'contact'}, [
+        e('h2', null, `Any additional questions? Interested in starting a chapter? Fill out this form: `), 
+        e('div', {id: 'contact-content'}, [
+          e('form', null, [
+            e('label', {for: 'name'}, e('input', {type: 'text', id:'name', placeholder: 'Name'}, null)), 
+            e('label', {for: 'email'}, e('input', {type: 'text', id:'email', placeholder: 'Email'}, null)), 
+            e('label', {for: 'subject'}, e('input', {type: 'text', id:'subject', placeholder: 'Subject'}, null)), 
+            e('label', {for: 'message'}, e('textarea', {id:'message', placeholder: 'Message'}, null)),
+            e('button', null, 'Send')]), 
+          e('img', {src: 'images/contact-img.png', alt: ''}, null)])])
+    );
   }
 }
 
