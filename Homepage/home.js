@@ -25,7 +25,8 @@ class Resources extends React.Component {
           e('h2', null, 'Resources'), 
         e('p', null, `Our services only provide the best 
         tutors that will guide you to fulfill all your programming 
-        inquires. Get started with coding, the right way with our mentors.`), e('button', null, 'Read More')])
+        inquires. Get started with coding, the right way with our mentors.`), 
+        e('a', {href: '#', target: '_blank'}, e('button', null, 'Read More'))])
       ]), e(Footer, null)])
     );    
   }
@@ -90,7 +91,7 @@ class Internship extends React.Component {
           e('p', null, `The Coding Foundation offers 
           internship positions for any department. If 
           you want to learn more, click the button below!`), 
-          e('button', null, 'Join Now!')]), 
+          e('a', {href: '#', target: '_blank'}, e('button', null, 'Join Now!'))]), 
           e('img', {src: 'images/internship-img2.png', alt: ''}, null)]),
         e(Footer, null)])
     );
@@ -111,7 +112,7 @@ class Discord extends React.Component {
             e('img', {src: 'images/discord-icon.png', alt: ''}, null), 
             e('p', null, `Join to get in touch with students across the world. 
             Develop your network to develop your passion. Anyone Could join Discord!`), 
-            e('button', null, 'Join Now')])]), 
+            e('a', {href: 'https://discord.gg/SZ6wtDEwtj', target: '_blank'}, e('button', null, 'Join Now'))])]), 
         e(Footer, null)])
     );
   }
@@ -129,7 +130,7 @@ class Contact extends React.Component {
             e('label', {for: 'email'}, e('input', {type: 'text', id:'email', placeholder: 'Email'}, null)), 
             e('label', {for: 'subject'}, e('input', {type: 'text', id:'subject', placeholder: 'Subject'}, null)), 
             e('label', {for: 'message'}, e('textarea', {id:'message', placeholder: 'Message'}, null)),
-            e('button', null, 'Send')]), 
+            e('button', {type: 'submit'}, 'Send')]), 
           e('img', {src: 'images/contact-img.png', alt: ''}, null)])])
     );
   }
