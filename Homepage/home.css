@@ -34,13 +34,13 @@ hr {
 
 /* <------------ Resources ------------> */
 
-#resources {
+#resources-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10px;
 }
 
-#resources img {
+#resources-content img {
     width: 100%;
     height: 80%;
     z-index: -1;
@@ -56,18 +56,18 @@ hr {
     color: #444343;
 }
 
-#resources h2 {
+#resources-content h2 {
     font-size: 70px;
     margin-bottom: 50px;
     color: #39A6AD;
 }
 
-#resources p {
+#resources-content p {
     font-size: 43px;
     margin-bottom: 40px;
 }
 
-#resources button {
+#resources-content button {
     width: 287px;
     height: 83px;
     font-size: 30px;
@@ -78,15 +78,15 @@ hr {
     border: 0;
 }
 
-#resources button:hover {
+#resources-content button:hover {
     cursor: pointer;
 }
 
-#resources footer {
+#resources-content footer {
     grid-column: 1 / 3;
 }
 
-#resources hr {
+#resources-content hr {
     grid-column: 1 / 3;
 }
 
@@ -96,12 +96,12 @@ hr {
 #testimonial-info {
     width: 50%;
     margin: 0 auto;
-    padding-top: 30px;
+    margin-top: 30px;
     font-family: var(--font-style);
     font-size: 40px;
 }
 
-#testimonials h2 {
+#testimonials-content h2 {
     text-align: center;
     color: #585858;
     font-family: var(--font-style);
@@ -174,8 +174,8 @@ hr {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    height: 90vh;
-    width: 40%;
+    height: 92vh;
+    width: 45%;
 }
 
 #internship-content h2 {
