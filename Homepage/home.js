@@ -1,10 +1,14 @@
 'use strict';
 
+// Creates and returns a new React element of a given type
 const e = React.createElement;
+
+// App component renders all 6 frames of the website
 
 class App extends React.Component {
   
   render() {
+    // The React.Fragment component lets you return multiple elements
     return (e(React.Fragment, null,
       e(Resources, null),
       e(Testimonials, null), 
@@ -14,6 +18,8 @@ class App extends React.Component {
       e(Footer, null)));
   }
 }
+
+// Resources frame
 
 class Resources extends React.Component {
   
@@ -33,6 +39,8 @@ class Resources extends React.Component {
   }
 }
 
+// Testimonials frame
+
 class Testimonials extends React.Component {
 
   render() {
@@ -51,6 +59,8 @@ class Testimonials extends React.Component {
     );
   }
 }
+
+// Review frame
 
 class Review extends React.Component {
 
@@ -72,6 +82,8 @@ class Review extends React.Component {
   }
 }
 
+// Section footer for every frame
+
 class SectionFooter extends React.Component {
 
   render() {
@@ -80,6 +92,8 @@ class SectionFooter extends React.Component {
     );
   }
 }
+
+// Internship frame
 
 class Internship extends React.Component {
 
@@ -98,6 +112,8 @@ class Internship extends React.Component {
     );
   }
 }
+
+// Discord frame
 
 class Discord extends React.Component {
 
@@ -119,6 +135,8 @@ class Discord extends React.Component {
   }
 }
 
+// Contact frame
+
 class Contact extends React.Component {
 
   render() {
@@ -137,6 +155,36 @@ class Contact extends React.Component {
   }
 }
 
+// react elements for the links of navigate, resources, legalities 
+
+let navigate = 
+  e('div', null,
+  e('p', null, 'Navigate'), 
+  e('ul', null, 
+    e('li', null, e('a', {href: '#'}, 'Home')),
+    e('li', null, e('a', {href: '#'}, 'About Us')),
+    e('li', null, e('a', {href: '#'}, 'Opportunites')),
+    e('li', null, e('a', {href: '#'}, 'Events')),
+    e('li', null, e('a', {href: '#'}, 'Discord')),
+    e('li', null, e('a', {href: '#'}, 'FAQ'))));
+
+let resources = 
+  e('div', null,
+  e('p', null, 'Resources'), 
+  e('ul', null, 
+    e('li', null, e('a', {href: '#'}, 'Tutoring')),
+    e('li', null, e('a', {href: '#'}, 'Workshops')),
+    e('li', null, e('a', {href: '#'}, 'Sponsors'))));
+
+let legalities = 
+  e('div', null,
+  e('p', null, 'Legalities'), 
+  e('ul', null, 
+    e('li', null, e('a', {href: '#'}, 'Privacy Policy')),
+    e('li', null, e('a', {href: '#'}, 'Terms of Use'))));
+
+// The footer of the homepage
+
 class Footer extends React.Component {
 
   render() {
@@ -147,35 +195,18 @@ class Footer extends React.Component {
         e('div', {id: 'footer-content'}, 
           e('div', {id: 'footer-links'}, 
             e('img', {src: 'images/tcf-logo.png', alt: ''}, null), 
+            navigate,
+            resources,
+            legalities,
             e('div', null,
-              e('p', null, 'Navigate'), 
-              e('ul', null, 
-                e('li', null, e('a', {href: '#'}, 'Home')),
-                e('li', null, e('a', {href: '#'}, 'About Us')),
-                e('li', null, e('a', {href: '#'}, 'Opportunites')),
-                e('li', null, e('a', {href: '#'}, 'Events')),
-                e('li', null, e('a', {href: '#'}, 'Discord')),
-                e('li', null, e('a', {href: '#'}, 'FAQ')))),
-              e('div', null,
-                e('p', null, 'Resources'), 
-                e('ul', null, 
-                  e('li', null, e('a', {href: '#'}, 'Tutoring')),
-                  e('li', null, e('a', {href: '#'}, 'Workshops')),
-                  e('li', null, e('a', {href: '#'}, 'Sponsors')))),
-              e('div', null,
-                e('p', null, 'Legalities'), 
-                e('ul', null, 
-                  e('li', null, e('a', {href: '#'}, 'Privacy Policy')),
-                  e('li', null, e('a', {href: '#'}, 'Terms of Use')))),
-              e('div', null,
-                e('p', null, 'Social'), 
-                e('span', {id: 'social-links'}, 
-                  e('a', {href: '#'}, e('i', {className: "fab fa-facebook-f"}, null)), 
-                  e('a', {href: 'https://www.instagram.com/thecodingfoundation_/?hl=en', target: '_blank'}, e('i', {className: "fab fa-instagram"}, null)),
-                  e('a', {href: 'https://www.linkedin.com/company/the-coding-foundation', target: '_blank'}, e('i', {className: "fab fa-linkedin"}, null)),
-                  e('a', {href: 'https://www.tiktok.com/@thecodingfoundation_?lang=en&is_copy_url=1&is_from_webapp=v1', target: '_blank'}, e('i', {className: "fab fa-tiktok"}, null)))
-                )
-              ),
+              e('p', null, 'Social'), 
+              e('span', {id: 'social-links'}, 
+                e('a', {href: '#'}, e('i', {className: "fab fa-facebook-f"}, null)), 
+                e('a', {href: 'https://www.instagram.com/thecodingfoundation_/?hl=en', target: '_blank'}, e('i', {className: "fab fa-instagram"}, null)),
+                e('a', {href: 'https://www.linkedin.com/company/the-coding-foundation', target: '_blank'}, e('i', {className: "fab fa-linkedin"}, null)),
+                e('a', {href: 'https://www.tiktok.com/@thecodingfoundation_?lang=en&is_copy_url=1&is_from_webapp=v1', target: '_blank'}, e('i', {className: "fab fa-tiktok"}, null)))
+              )
+            ),
           e('hr', null, null), 
           e('p', {id: 'copyright'}, '© 2021 THE CODING FOUNDATION | All Rights Reserved')), 
         e('p', {id: 'created-by'}, 'Created by The TCF Web Development'))
