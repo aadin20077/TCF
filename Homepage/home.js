@@ -171,9 +171,9 @@ class Footer extends React.Component {
                 e('p', null, 'Social'), 
                 e('span', {id: 'social-links'}, 
                   e('a', {href: '#'}, e('i', {className: "fab fa-facebook-f"}, null)), 
-                  e('a', {href: '#'}, e('i', {className: "fab fa-instagram"}, null)),
-                  e('a', {href: '#'}, e('i', {className: "fab fa-linkedin"}, null)),
-                  e('a', {href: '#'}, e('i', {className: "fab fa-tiktok"}, null)))
+                  e('a', {href: 'https://www.instagram.com/thecodingfoundation_/?hl=en', target: '_blank'}, e('i', {className: "fab fa-instagram"}, null)),
+                  e('a', {href: 'https://www.linkedin.com/company/the-coding-foundation', target: '_blank'}, e('i', {className: "fab fa-linkedin"}, null)),
+                  e('a', {href: 'https://www.tiktok.com/@thecodingfoundation_?lang=en&is_copy_url=1&is_from_webapp=v1', target: '_blank'}, e('i', {className: "fab fa-tiktok"}, null)))
                 )
               ),
           e('hr', null, null), 
