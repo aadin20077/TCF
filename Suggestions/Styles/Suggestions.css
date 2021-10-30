@@ -15,7 +15,7 @@ input {
   background: #f3f3f3;
   border-radius: 50px;
 }
-/* Rectangle 11 */
+
 #suggestions-container {
   display: flex;
   flex-direction: row;
