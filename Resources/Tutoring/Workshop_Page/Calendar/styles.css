@@ -1,0 +1,132 @@
+.calendar {
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin-top: 24px;
+  max-width: 400;
+  margin-bottom: 35px;
+}
+
+.calendar .header {
+  text-align: center;
+  min-height: 4rem;
+  line-height: 4rem;
+  font-family: inter;
+  font-weight: 400;
+  display: flex;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.calendar .day-names {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  font-weight: bold;
+  color: grey;
+}
+
+.calendar .header .previous {
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+  user-select: none;
+  font-size: 3rem;
+  font-weight: 85;
+  color: black;
+}
+
+.calendar .header .next {
+  flex: 1;
+  text-align: right;
+  margin-right: 1rem;
+  user-select: none;
+  font-size: 3rem;
+  font-weight: 85;
+  color: black;
+}
+
+.calendar .week {
+  background-color: white;
+  width: calc(100% / 7);
+  height: 100%;
+  line-height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-weight: 400;
+}
+.calendar .week div {
+  width: 100%;
+}
+
+.calendar .day {
+  position: relative;
+  width: calc(100% / 7);
+  height: 100%;
+  display: inline-block;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+}
+
+.calendar .day div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: black;
+  z-index: 100;
+  line-height: 44px;
+  user-select: none;
+
+}
+
+.calendar .day div.outside {
+  color: lightgray;
+}
+.calendar .day div:hover{
+  background-color: rgb(161, 161, 161);
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.calendar .day div.selected {
+  background-color: #4198B4;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+
+.calendar .day div.today {
+  color: green;
+  border-radius: 15px;
+}
+.submit-btn{
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  color:  #4198B4;
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 5px;
+  height: 65px;
+  width: 350px;
+  padding-top: 15px;
+  margin: 0 auto;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-appearance: button;
+  
+}
+
+.submit-btn:hover {
+  background-color: #4198B4; /* Green */
+  color: white;
+}
+
