@@ -1,0 +1,9 @@
+.What-section > h2 {
+    color:#F9B508;
+}
+
+.What-section > h3 {
+    text-align: right;
+    max-width: 250px;  
+    left: 30pt;
+}
