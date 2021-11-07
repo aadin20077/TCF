@@ -1,1 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
+/* <------------ Global styles ------------> */
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    min-height: 100vh;
+    width: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 80px;
+    color: #444343;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+hr {
+    background-color: #C4C4C4;
+    border-radius: 50px;
+    border: 0;
+    height: 4px;
+}
+
+
+/* <------------ Opportunities ------------> */
+
+.opportunities {
+    gap: 150px;
+}
+
+.opportunities-text {
+    font-weight: 400;
+    font-size: 40px;
+    width: 46%;
+    margin: 0 auto;
+    color: #646464;
+}
+
+
+/* <------------ Executive Board ------------> */
+
+.executive-board {
+    width: 60%;
+    margin: 0 auto;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.executive-board p {
+    font-size: 38px;
+    font-weight: 400;
+    color: #646464;
+}
+
+.executive-board p span {
+    color: #000000;
+}
+
+
+/* <------------ Executive Application ------------> */
+
+.executive-app {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0;
+    width: 80%;
+    background-color: #F3F3F3;
+    margin: 0 auto;
+    border-radius: 30px;
+    gap: 120px;
+    color: #646464;
+}
+
+.executive-app h2 {
+    margin: 0 auto;
+}
+
+.executive-app h2:first-of-type {
+    width: 40%;
+}
+
+.executive-app img {
+    width: 836px;
+    height: 496px;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.executive-app p {
+    font-size: 40px;
+    font-weight: 400;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.executive-app a {
+    color: #176592;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.executive-app-bottom-text {
+    font-size: 40px;
+    font-weight: 400;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+    color: #323232;
+}
+
+.executive-app-bottom-text p:nth-of-type(2) {
+    margin-top: 30px;
+}
+
+
+/* <------------ Footer ------------> */
+
+#homepage-footer {
+    margin-top: 100px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F0F0F0;
+}
+
+#homepage-footer p {
+    color: #6F6F6F;
+    font-size: 18px;
+}
+
+#trusted-by {
+    padding: 10px 0 0 20px;
+}
+
+#created-by {
+    text-align: right;
+    padding: 15px;
+}
+
+#copyright {
+    margin-top: 40px;
+}
+
+#footer-content {
+    text-align: center;
+    width: 81%;
+    margin: 0 auto;
+}
+
+#footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#footer-links img {
+    width: 101px;
+    height: 60px;
+}
+
+#footer-links div p {
+    padding: 0;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0A142F;
+}
+
+#footer-links div ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 30px 0 0;
+    font-size: 14px;
+}
+
+#footer-links li {
+    margin: 20px 0;
+}
+
+#footer-links a, #footer-links a:hover {
+    text-decoration: none;
+    color: #0A142F;
+}
+
+#social-links {
+    display: block;
+    margin-top: 30px;
+}
+
+#social-links a {
+    display: inline-block;
+    margin-right: 30px;
+}
